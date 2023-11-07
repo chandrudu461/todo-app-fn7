@@ -1,0 +1,40 @@
+.container {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(248, 242, 242, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    padding-left: 15%;
+    margin: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input,
+  textarea,
+  select,
+  button {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 878px;
+  }
+  
+  select {
+    width: 900px;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 900px;
+  }
+h1{
+  padding-left: 400px;
+  padding-top: 50px;
+}

@@ -1,10 +1,11 @@
 import React from 'react';
+import './Task.css'
 
 function Task({ task, completeTask, deleteTask }) {
   const { id, title, description, dueDate, priority, completed } = task;
 
   return (
-    <li>
+    <li class="task-item">
       <h3>{title}</h3>
       <p>{description}</p>
       <p>Due Date: {dueDate}</p>

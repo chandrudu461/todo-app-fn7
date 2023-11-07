@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import './TaskForm.css'
 
 function TaskForm({ addTask }) {
   const [task, setTask] = useState({
-    id: Date.now(), // Initialize with a default ID
+    id: Date.now(), 
     title: '',
     description: '',
     dueDate: '',
@@ -22,7 +23,7 @@ function TaskForm({ addTask }) {
     e.preventDefault();
     addTask(task);
     setTask({
-      id: Date.now(), // Generate a new ID for the next task
+      id: Date.now(), 
       title: '',
       description: '',
       dueDate: '',
@@ -32,35 +33,37 @@ function TaskForm({ addTask }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="title"
-        value={task.title}
-        placeholder="Task Title"
-        onChange={handleChange}
-        required
-      />
-      <textarea
-        name="description"
-        value={task.description}
-        placeholder="Task Description"
-        onChange={handleChange}
-      />
-      <input
-        type="date"
-        name="dueDate"
-        value={task.dueDate}
-        onChange={handleChange}
-      />
-      <select name="priority" value={task.priority} onChange={handleChange} required>
-        <option value="">Select Priority</option>
-        <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
-        <option value="High">High</option>
-      </select>
-      <button type="submit">Add Task</button>
-    </form>
+    <div className='container'>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="title"
+          value={task.title}
+          placeholder="Task Title"
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="description"
+          value={task.description}
+          placeholder="Task Description"
+          onChange={handleChange}
+        />
+        <input
+          type="date"
+          name="dueDate"
+          value={task.dueDate}
+          onChange={handleChange}
+        />
+        <select name="priority" value={task.priority} onChange={handleChange} required>
+          <option value="">Select Priority</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <button type="submit">Add Task</button>
+      </form>
+    </div>
   );
 }
 
