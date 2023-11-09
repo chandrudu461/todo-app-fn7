@@ -1,5 +1,4 @@
 import React from 'react';
-import './Task.css'
 
 function Task({ task, completeTask, deleteTask }) {
   const { id, title, description, dueDate, priority, completed } = task;
